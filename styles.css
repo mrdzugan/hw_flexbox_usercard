@@ -1,0 +1,110 @@
+@import "./assets/css/fonts.css";
+
+:root {
+    font-family: 'Roboto', sans-serif;
+    --primary-color: #000000;
+    --secondary-color: #fe001d;
+    --box-shadow: -1px -1px 14px -1px rgba(0,0,0,0.75);
+    --icon-size: 24px;
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aquamarine;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 80px auto;
+}
+
+.user-card {
+    border-radius: 5px;
+    padding: 40px 20px;
+    width: 300px;
+    height: 500px;
+    background-color: white;
+    -webkit-box-shadow: var(--box-shadow);
+    -moz-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
+}
+
+.image-container-wrap {
+    position: relative;
+    --image-size: 150px;
+    width: var(--image-size);
+    height: var(--image-size);
+}
+
+.image-container {
+    width: inherit;
+    height: inherit;
+    border: 10px solid #EFEFEF;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.image-container > img {
+    object-fit: cover;
+    width: inherit;
+    height: inherit;
+}
+
+.image-container-wrap::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    right: 20px;
+    background-position: center;
+    background-image: url('./assets/image/Flag-Ukraine.jpg');
+    overflow: hidden;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    border: 5px solid white;
+    border-radius: 50%;
+    -webkit-box-shadow: var(--box-shadow);
+    -moz-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
+}
+
+.general-info {
+    text-align: center;
+}
+
+.general-info > h2 {
+    margin: 5px;
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: var(--secondary-color);
+}
+
+.general-info > h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.description {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.contacts-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.contacts-container > svg {
+    color: #fe001d;
+    width: var(--icon-size);
+    height: var(--icon-size);
+}
